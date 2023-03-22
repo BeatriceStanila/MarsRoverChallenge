@@ -20,12 +20,12 @@ function createGrid(rows, columns) {
   // initialise an empty array for the grid
   let grid = [];
 
-  // iterate through the rows
+  // iterate through the rows, want the rows to start form 1
   for (let i = 1; i < rows; i++) {
     // initialise and empty array for rows
     let row = [];
 
-    // iterate through the columns
+    // iterate through the columns, want the columns to start form 1
     for (let j = 1; j < columns; j++) {
       // push a value 0 the rows variable
       row.push(0);
@@ -52,7 +52,7 @@ function marsRover(grid, x, y, orientation, directions) {
   let currentPosition = [x, y];
   console.log(`The current robot's position is ${currentPosition}.`);
 
-  // track last position
+  // create an empty array to save the last position of the robot
   let lastPosition = [];
 
   // loop though string of commands and update the robot's position
@@ -62,6 +62,7 @@ function marsRover(grid, x, y, orientation, directions) {
     // move forward depending on the orientation and update the last position
     if (direction === "F" && orientation === "N") {
       currentPosition = [x + 1, y]; //x++;
+      // save the current position into the empty array
       lastPosition.push(currentPosition);
     } else if (direction === "F" && orientation === "E") {
       currentPosition = [x, y + 1]; //y++;
