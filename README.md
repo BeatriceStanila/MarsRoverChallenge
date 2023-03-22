@@ -19,3 +19,5 @@ i.e. (0, 0) represents the south-west corner of the grid
 2. Refactor the code -> use switch statement inside the marsRover fn
 
 3. show the initial and last position of the robot on the grid by changing 0 to X
+
+4. do some testing to see if the code works as expected in each scenario
